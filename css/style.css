@@ -72,7 +72,7 @@ header {
     gap: 0;
 }
 
-#navbar > li {
+#navbar > .menu-option {
     list-style: none;
     padding: 25px;
 }
@@ -90,7 +90,7 @@ header {
     display: flex;
     align-items: center;
     color: white;
-    background: url('../imagens/background-principal.jpg') no-repeat center center/cover;
+    background: url('../imagens/background1366x663.jpg') no-repeat center center/cover;
 
     /* Overlay */
     background-color: rgba(254, 220, 218, 0.4);
@@ -124,4 +124,33 @@ header {
     margin-top: -25px;
     color: var(--cor-contraste);
     width: 100%;
+}
+
+
+#botao-apresentacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--cor-contraste);
+
+    background: #FFE8DF;
+
+    width: fit-content;
+    margin-top: 10px;
+    padding: 15px 35px;
+
+    border-radius: 30px;
+    border: 2px solid var(--cor-contraste);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#botao-apresentacao > svg {
+    transform: translateY(2px);
+    height: 30px;
 }
