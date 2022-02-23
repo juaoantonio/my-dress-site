@@ -37,13 +37,15 @@ body {
 
 /* Header (Cabeçalho) */
 header {
-    background: rgba(190, 130, 120, 0.91);
+    background: rgba(190, 130, 120);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 60px;
+    top: 0;
     position: fixed;
+    overflow: visible;
 }
 
 #cabecalho-container {
@@ -51,7 +53,8 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 0 0 100px;
+    height: inherit;
+    padding: 0 50px 0 100px;
 }
 
 #logo-container {
@@ -86,11 +89,12 @@ header {
 
 /* Conteúdo Principal */
 #apresentacao {
-    height: 100vh;
+    height: 91vh;
     display: flex;
     align-items: center;
     color: white;
     background: url('../imagens/background1366x663.jpg') no-repeat center center/cover;
+    margin-top: 60px;
 
     /* Overlay */
     background-color: rgba(254, 220, 218, 0.4);
@@ -102,6 +106,7 @@ header {
     flex-direction: column;
     width: 100%;
     padding-left: 100px;
+    margin-top: -25px;
 }
 
 #mensagem-apresentacao {
@@ -142,7 +147,7 @@ header {
     background: #FFE8DF;
 
     width: fit-content;
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 15px 35px;
 
     border-radius: 30px;
@@ -151,6 +156,62 @@ header {
 }
 
 #botao-apresentacao > svg {
-    transform: translateY(2px);
+    display: inline;
+    padding-top: 3px;
     height: 30px;
+}
+
+/* Quem Somos */
+
+#quem-somos-container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+#quem-somos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    max-width: 90%;
+    max-width: 950px;
+    width: 80%;
+    height: inherit;
+}
+
+#foto-quem-somos {
+    width: 300px;
+    background: var(--cor-contraste);
+    border-radius: 50%;
+}
+
+#texto-quem-somos {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    gap: 30px;
+
+    text-align: right;
+    width: 500px;
+}
+
+#texto-quem-somos > h1 {
+    font-size: 3.7rem;
+    font-family: var(--fonte-titulo);
+}
+
+#texto-quem-somos > p {
+    font-family: var(--fonte-paragrafo);
+    font-size: 1.5rem;
+}
+
+/* Showcase Vestidos */
+#vestidos-container {
+    height: 1000px;
 }
