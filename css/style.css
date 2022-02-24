@@ -37,7 +37,7 @@ body {
 
 /* Header (Cabeçalho) */
 header {
-    background: rgba(190, 130, 120);
+    background: var(--cor-contraste-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ header {
     height: 60px;
     top: 0;
     position: fixed;
-    overflow: visible;
+    border-bottom: 1px solid white;
 }
 
 #cabecalho-container {
@@ -179,8 +179,7 @@ header {
     justify-content: space-between;
     flex-direction: row;
 
-    max-width: 90%;
-    max-width: 950px;
+    max-width: 980px;
     width: 80%;
     height: inherit;
 }
@@ -201,7 +200,7 @@ header {
     width: 500px;
 }
 
-#texto-quem-somos > h1 {
+#texto-quem-somos > h2 {
     font-size: 3.7rem;
     font-family: var(--fonte-titulo);
 }
@@ -211,7 +210,105 @@ header {
     font-size: 1.5rem;
 }
 
+/* Features */
+#features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-contraste);
+    height: fit-content;
+}
+
+#container > h2 {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    font-size: 4rem;
+    margin: 25px auto 40px auto;
+    padding-bottom: 20px;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 35%;
+}
+
+#features-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 0 70px 0;
+    gap: 30px;
+    width: 85%;
+}
+
+.feature {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature > img {
+    width: 100px;
+    height: 100px;
+}
+
+.feature > .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.feature > .texto h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.8rem;
+    color: white;
+}
+
+.feature > .texto p {
+    font-family: var(--fonte-paragrafo);
+    font-size: 1.6rem;
+    color: white;
+}
+
 /* Showcase Vestidos */
 #vestidos-container {
+    background: var(--cor-contraste-light);
+}
+
+#vestidos > h2 {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    font-size: 4rem;
+    padding: 25px 0 30px 20px;
+    margin: 0 auto 20px auto;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 35%;
+}
+
+#paineis {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+.painel {
+    flex: 1 1 180px;
+    margin: 10px 20px;
+}
+
+.painel > img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Rodapé */
+footer {
     height: 1000px;
 }
