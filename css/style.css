@@ -32,6 +32,11 @@ body {
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
 }
 
 
@@ -276,6 +281,7 @@ header {
 /* Showcase Vestidos */
 #vestidos-container {
     background: var(--cor-contraste-light);
+    padding-bottom: 30px;
 }
 
 #vestidos > h2 {
@@ -287,6 +293,19 @@ header {
     color: white;
     border-bottom: 1px solid white;
     width: 35%;
+}
+
+#vestidos figcaption {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    text-align: center;
+    color: white;
+    gap: 7px;
+}
+
+#vestidos p {
+    font-size: 1.3rem;
 }
 
 #paineis {
@@ -310,5 +329,14 @@ header {
 
 /* Rodapé */
 footer {
-    height: 1000px;
+    background-color: var(--cor-principal-light);
+    padding: 10px;
+    text-align: center;
+    color: var(--cor-contraste);
+    font-size: 1.3rem
+}
+
+footer a {
+    font-weight: bold;
+    font-style: italic;
 }
