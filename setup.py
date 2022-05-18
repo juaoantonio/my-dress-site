@@ -13,5 +13,5 @@ setup(
         version="1.0", 
         packages=find_packages(), 
         scripts=["manage.py"],
-        install_requires = ["django", "pytz"]
+        install_requires = ["django", "pytz", "pillow"]
     )
