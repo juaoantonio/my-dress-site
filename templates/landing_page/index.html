@@ -1,0 +1,76 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}
+My Dress - Aluguel de Vestidos
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'landing_page/css/landing_page.css' %}">
+{% endblock styles %}
+
+<!--Conteúdo Principal-->
+<main>
+    {% block main %}
+    
+    <!-- Apresentação -->
+    <section id="apresentacao">
+        <div id="conteudo-apresentacao">
+            <div id="mensagem-apresentacao">
+                <h2>Novas vestes para</h2>
+                <h1>Desbravar.</h1>
+            </div>
+            <a id="botao-apresentacao" href="#">
+                <p>Contate-nos</p><i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Quem Somos? -->
+    <section id="quem-somos-container">
+        <div id="quem-somos">
+            <img id="foto-quem-somos" src="{% static 'landing_page/img/larissa.jpg' %}" alt="Foto Larissa">
+            
+            <div id="texto-quem-somos">
+                <h2>Quem Somos?</h2>
+                <p>Ut imperdiet ultrices rhoncus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis
+                    in faucibus. Ut eu ex in nulla pellentesque blandit. Mauris luctus sem at volutpat tempor.
+                    Phasellus lacus purus, maximus eu quam quis, porttitor euismod diam. Proin tortor magna,
+                    condimentum sed tempor vel, dapibus et erat. Fusce luctus eget purus eu porttitor.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features">
+            <div id="container">
+                <h2>Nosso Lema</h2>
+                
+                <div id="features-container">
+                    <div class="feature">
+                        <img src="{% static 'landing_page/img/mirror.png' %}" alt="Ícone Espelho">
+                    <div class="texto">
+                        <h3>Bom Gosto</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ad quis.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'landing_page/img/price-tag.png' %}" alt="Ícone Preço">
+                    <div class="texto">
+                        <h3>Custo Benefício</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo perferendis optio
+                            repellendusex.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'landing_page/img/dress.png' %}" alt="Ícone Dress">
+                    <div class="texto">
+                        <h3>Trajes Modernos</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores dolores impedit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock main %}
+</main>

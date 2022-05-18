@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+{% comment %} {% block styles %} <link rel="stylesheet" href="vestidos.css"> {% endblock styles %} {% endcomment %}
+{% block title %}Vestidos - My Dress{% endblock title %}
+
+{% block main %}
+    {% for vestido in object_list %}
+
+        <div class="vestido">
+            <div class="foto">
+                <img src="{{vestido.image.url}}" alt="{{vestido.name}}">
+            </div>
+            
+            <div class="descripcion">
+                <h2>{{vestido.name}}</h2>
+                <p>{{vestido.descripcion}}</p>
+                <p>{{vestido.price}}€</p>
+            </div>
+        </div>
+    
+    {% empty %}
+        
+        <div>Nenhum vestido disponível no momento.</div>
+    
+    {% endfor %}
+{% endblock main %}

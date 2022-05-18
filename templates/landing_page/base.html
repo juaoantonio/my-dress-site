@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'landing_page/img/flaticon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'landing_page/css/base.css' %}">
+    {% block styles %}{% endblock styles %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div id="cabecalho-container">
+            <div id="logo-container">
+                <img id="logo" src="{% static 'landing_page/img/logo.png' %}" alt="Logo My Dress">
+            </div>
+
+            <nav id="navbar-container">
+                <ul id="navbar">
+                    <li class="menu-option"><a href="/">Home</a></li>
+                    <li class="menu-option"><a href="#quem-somos-container">Quem Somos</a></li>
+                    <li class="menu-option"><a href= {% url 'vestidos' %} >Vestidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main> 
+        {% block main %}{% endblock main %}
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        {% block footer %}
+        <p>Site feito por <a href="https://github.com/juaoantonio" target="_blank" rel="external">João Antônio - Desenvolvedor Web</a></p>
+        {% endblock footer %}
+    </footer>
+
+    <!-- Script -->
+    <script src="https://kit.fontawesome.com/a0913b7604.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
