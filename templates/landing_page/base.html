@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'landing_page/img/flaticon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'landing_page/css/base.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     {% block styles %}{% endblock styles %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
@@ -15,7 +17,41 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div id="cabecalho-container">
+        <nav class="navbar navbar-custom navbar-expand-md bg-faded sticky-top py-1">
+            <div class="container d-flex align-items-center">
+                <a class="navbar-brand fs-3 link-light p-2 bd-highlight" href="#">
+                    <div class="d-inline-flex align-items-center justify-content-start">
+                        <img src="{% static 'landing_page/img/boneca-logo.jpeg' %}" alt="" width="40" height="40" class="rounded-circle">
+                        <p class="ms-3 mb-0 fs-2">My Dress</p>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                        <li class="nav-item fs-2 px-3">
+                            <a class="nav-link link-light" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item fs-2 px-3">
+                            <a class="nav-link link-light" href="{% url 'vestidos' %}">Vestidos</a>
+                        </li>
+                        {% comment %} <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Menu </a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Item</a></li>
+                                <li><a class="dropdown-item" href="#">Item</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            </ul>
+                        </li> {% endcomment %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% comment %} <div id="cabecalho-container">
             <div id="logo-container">
                 <img id="logo" src="{% static 'landing_page/img/logo.png' %}" alt="Logo My Dress">
             </div>
@@ -24,25 +60,31 @@
                 <ul id="navbar">
                     <li class="menu-option"><a href="/">Home</a></li>
                     <li class="menu-option"><a href="#quem-somos-container">Quem Somos</a></li>
-                    <li class="menu-option"><a href= {% url 'vestidos' %} >Vestidos</a></li>
+                    <li class="menu-option"><a href={% url 'vestidos' %}>Vestidos</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> {% endcomment %}
     </header>
 
-    <main> 
+    <main>
         {% block main %}{% endblock main %}
     </main>
 
     <!-- Rodapé -->
     <footer>
         {% block footer %}
-        <p>Site feito por <a href="https://github.com/juaoantonio" target="_blank" rel="external">João Antônio - Desenvolvedor Web</a></p>
+        <p>Site feito por <a href="https://github.com/juaoantonio" target="_blank" rel="external">João Antônio -
+                Desenvolvedor Web</a></p>
         {% endblock footer %}
     </footer>
 
     <!-- Script -->
     <script src="https://kit.fontawesome.com/a0913b7604.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    {% block scripts %}
+    {% endblock scripts %}
 </body>
 
 </html>

@@ -41,7 +41,14 @@ a {
 
 
 /* Header (Cabeçalho) */
-header {
+.navbar-custom {
+    background-color: var(--cor-contraste-light);
+}
+
+.navbar-custom > a {
+    color: white;
+}
+/* header {
     background: var(--cor-contraste-light);
     display: flex;
     align-items: center;
@@ -89,7 +96,7 @@ header {
     font-size: 2.1rem;
     text-decoration: none;
     color: #ffffff;
-}
+} */
 
 main {
     min-height: 90vh;
