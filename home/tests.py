@@ -1,16 +1,17 @@
 from django.test import TestCase
 from django.urls import reverse
 
-class LandingPageViewTest(TestCase):
+
+class HomePageViewTest(TestCase):
     def test_view_url_exists(self):
-        response = self.client.get('/')
+        response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-    
+
     def test_view_url_accessible_by_name(self):
-        response = self.client.get(reverse('home'))
+        response = self.client.get(reverse("home"))
         self.assertEqual(response.status_code, 200)
-    
+
     def test_view_uses_correct_template(self):
-        response = self.client.get(reverse('home'))
+        response = self.client.get(reverse("home"))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'landing_page/index.html')
+        self.assertTemplateUsed(response, "home/index.html")
