@@ -1,0 +1,30 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block styles %} 
+    <link rel="stylesheet" href="{% static '/css/vestidos/vestidos.css' %}">
+{% endblock styles %}
+{% block title %}Vestidos - My Dress{% endblock title %}
+
+{% block main %}
+    <div class="container">
+        <div class="row justify-content-around">
+            {% for vestido in object_list %}
+
+                <div class="vestido card col-3">
+                    <img src="{{vestido.image.url}}" class="foto card-img-top" alt="{{vestido.name}}">
+                    
+                    <div class="descripcion card-body">
+                        <h2 class="card-title">{{vestido.name}}</h2>
+                        <p class="card-text">R${{vestido.price}}</p>
+                        <p class="card-text">{{vestido.description}}</p>
+                    </div>
+                </div>
+                
+            {% empty %}
+                
+                <div>Nenhum vestido disponível no momento.</div>
+                
+            {% endfor %}
+        </div>
+    </div>
+{% endblock main %}
